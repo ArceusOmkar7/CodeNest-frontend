@@ -5,7 +5,7 @@
     --background-black: #080908ff;
     /* Darkest shade, used as the background for the page */
 
-    --background-quiet-white: #1e1d22; 
+    --background-quiet-white: #1e1d22;
     /* Slight shade, used as the background for containers on the page */
 
     --heading-black: #17161Dff;
@@ -38,7 +38,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--background-black);
-    color: var(--white);
+    color: black;
 }
 
 .grid-col-span-2 {
@@ -51,12 +51,12 @@ body {
 
 .main-grid {
     display: grid;
-    gap: 2rem;
-    color:white;
+    gap: 3rem;
+    color: white;
     /* grid-template-columns: repeat(4, 1fr); */
     grid-template-areas: 'friends search smenu profile-menu'
-                         'friends posts posts friends-req'
-                         'groups posts posts settings';
+        'friends posts posts friends-req'
+        'groups posts posts settings';
     padding-block: 2rem;
     width: min(95%, 90rem);
     margin-inline: auto;
@@ -117,7 +117,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
 .friend {
@@ -130,7 +130,7 @@ body {
     gap: 15px;
 }
 
-.friend .name-id-container  {
+.friend .name-id-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -184,7 +184,7 @@ body {
     margin: 10px 5px;
 }
 
-.group .name-members-container  {
+.group .name-members-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,5 +224,37 @@ body {
     width: fit-content;
     padding: 15px 65px;
     margin: 25px 15px;
+}
+
+.search .input-wrapper form{
+    margin: 0px 5px;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-quiet-white);
+    width: 200px;
+
+}
+.search .input-wrapper form i {
+    font: 10px;
+    padding-right: 20px;
+    opacity: 0.7;
+}
+
+.search .input-wrapper input {
+    flex: 1;
+    height: 36px;
+    padding: 15px;
+    color: var(--white);
+    background-color: var(--background-quiet-white);
+    /* border-radius: 15px; */
+    border: none;
+    font-size: 15px;
+    width: 160px;
+}
+.search .input-wrapper input:focus {
+    outline: none;
 }
 
