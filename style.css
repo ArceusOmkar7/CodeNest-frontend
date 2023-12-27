@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;500;700&display=swap');
 
 :root {
     /* Custom Color Variables */
@@ -104,7 +104,8 @@ body {
 }
 
 .container-heading {
-    padding: 10px;
+    padding: 0px 28px;
+    padding-top: 16px;
     align-self: flex-start;
 }
 
@@ -122,9 +123,10 @@ body {
 .friend {
     display: flex;
     justify-content: space-between;
+    width: 278px;
     /* border: 1px solid cyan; */
     padding: 10px 15px;
-    margin: 10px 5px;
+    margin: 8px 5px;
     gap: 15px;
 }
 
@@ -135,6 +137,7 @@ body {
     align-items: flex-start;
     padding: 0px 15px 5px 7px;
     /* text-align: left; */
+    width: 128px;
 }
 
 .friend .name-id-container .name {
