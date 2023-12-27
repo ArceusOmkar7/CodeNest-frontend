@@ -253,6 +253,7 @@ body {
     border: none;
     font-size: 15px;
     width: 160px;
+    text-overflow: ellipsis;
 }
 .search .input-wrapper input:focus {
     outline: none;
