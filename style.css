@@ -57,7 +57,7 @@ body {
     gap: 3rem;
     color: white;
     /* grid-template-columns: repeat(4, 1fr); */
-    grid-template-areas: 'friends search-menu search-menu profile-menu'
+    grid-template-areas: 'friends search-menu-activity search-menu-activity profile-menu'
         'friends posts posts friends-req'
         'groups posts posts settings';
     padding-block: 2rem;
@@ -83,7 +83,7 @@ body {
 }
 
 .grid-element:nth-child(3) {
-    grid-area: search-menu;
+    grid-area: search-menu-activity;
 }
 
 .grid-element:nth-child(4) {
@@ -225,33 +225,42 @@ body {
     margin: 25px 15px;
 }
 
-.search-menu {
+.search-menu-activity {
     display: flex;
     justify-content: center;
     align-items: top;
-    gap: 50px;
+    /* gap: 50px; */
     flex-wrap: wrap;
+    width: 100%;
 }
 
-.search-menu .search .input-wrapper form {
+.search-menu-activity .search-menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.search-menu-activity .search .input-wrapper form {
     margin: 0px 5px;
-    position: relative;
+    /* position: relative; */
     border-radius: 15px;
     display: flex;
     align-items: center;
     padding: 10px;
     background-color: var(--background-quiet-white);
-    width: 200px;
+    width: 100%;
 
 }
 
-.search-menu .search .input-wrapper form i {
+.search-menu-activity .search .input-wrapper form i {
     font: 10px;
     padding-right: 20px;
     opacity: 0.7;
 }
 
-.search-menu .search .input-wrapper input {
+.search-menu-activity .search .input-wrapper input {
     flex: 1;
     height: 36px;
     padding: 15px;
@@ -263,7 +272,7 @@ body {
     text-overflow: ellipsis;
 }
 
-.search-menu .search .input-wrapper input:focus {
+.search-menu-activity .search .input-wrapper input:focus {
     outline: none;
 }
 
@@ -273,7 +282,7 @@ body {
 
 
 
-.search-menu .menu .icon-wrapper {
+.search-menu-activity .menu .icon-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,12 +291,12 @@ body {
     margin: 0px 5px;
     border-radius: 15px;
     height: 56px;
-    width: fit-content;
+    width: 100%;
 
 }
 
 
-.search-menu .menu .icon-wrapper ul {
+.search-menu-activity .menu .icon-wrapper ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -296,6 +305,84 @@ body {
     padding: 0px 25px;
 }
 
-.search-menu .menu .icon-wrapper ul li a i {
+.search-menu-activity .menu .icon-wrapper ul li a i {
     color: var(--inactive-icon);
+}
+
+.search-menu-activity .activity-upper-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: top; */
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+.search-menu-activity .activity-upper-container .activity-heading-container {
+    margin: 10px 0px;
+    font-weight: 500;
+}
+
+
+.search-menu-activity .activity-upper-container .text-area-container {
+    width: 100%;
+    height: 100%
+}
+
+.search-menu-activity .activity-upper-container .text-area-container #text-area {
+    background-color: var(--background-quiet-white);
+    resize: none;
+    color: var(--white);
+    border-radius: 15px;
+    padding: 10px;
+    width: inherit;
+    height: inherit;
+    border: none;
+}
+
+.search-menu-activity .activity-upper-container .text-area-container #text-area:focus {
+    outline: 2px solid var(--element-blue);
+}
+
+
+.search-menu-activity .activity-upper-container .post-stream-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0px;
+    width: 100%;
+}
+
+.search-menu-activity .activity-upper-container .post-stream-options button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    height: 56px;
+    background-color: var(--background-quiet-white);
+    border: none;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.search-menu-activity .activity-upper-container .post-stream-options button:nth-child(1) {
+    color: var(--element-blue);
+}
+
+.search-menu-activity .activity-upper-container .post-stream-options button:nth-child(2) {
+    color: var(--brighter-red);
+}
+
+.search-menu-activity .activity-upper-container .post-stream-options button i {
+    margin-right: auto;
+    font-size: 1rem;
+}
+
+
+.search-menu-activity .activity-upper-container .post-stream-options button span {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    /* This will push the text to the center */
 }
